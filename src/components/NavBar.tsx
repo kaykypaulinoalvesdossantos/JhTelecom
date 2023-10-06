@@ -14,7 +14,7 @@ export default function NavBar() {
     },
     {
       name: 'Sobre',
-      link: '/galerie',
+      link: '/About',
     },
     {
       name: 'Noticias',
@@ -22,11 +22,11 @@ export default function NavBar() {
     },
     {
       name: 'Trabalhe Conosco',
-      link: '/contact',
+      link: '/WorkWithUs',
     },
     {
       name: 'Contato',
-      link: '/contact',
+      link: '/Contact',
     },
   ]
 
