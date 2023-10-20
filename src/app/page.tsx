@@ -1,9 +1,10 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
+import NewsPage from "@/components/home/News/News";
+import About from "@/components/home/about/About";
+import CompontsVideo from "@/components/home/compontsVideo/compontsVideo";
+import Contact from "@/components/home/contact/Contact";
 import Services from "@/components/service/Services";
-import About from "@/components/subcomponents/about/About";
-import CompontsVideo from "@/components/subcomponents/compontsVideo/compontsVideo";
-import Contact from "@/components/subcomponents/contact/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <section className="space-y-28">
       <CompontsVideo/>
       <About/>
+      <NewsPage/>
       <Services/>
       <Contact/>
       <Footer/>
