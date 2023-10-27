@@ -18,7 +18,7 @@ export default function NavBar() {
     },
     {
       name: 'Noticias',
-      link: '/contact',
+      link: '/Noticias',
     },
     {
       name: 'Trabalhe Conosco',
