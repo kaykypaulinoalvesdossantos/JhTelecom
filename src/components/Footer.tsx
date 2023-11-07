@@ -7,35 +7,35 @@ import In from '@/../public/img/In.png'
 
 export default function Footer() {
     return(
-        <div>
-        <div className="w-full py-24 px-40 bg-[#1C3363] flex justify-around ">
-           <div className="space-y-8">
+        <footer>
+        <div className="w-full py-24 px-40 bg-[#1C3363] flex justify-around max-md:flex-col max-md:gap-16 max-md:items-center">
+           <div className="space-y-8 max-md:space-y-4 max-md:flex max-md:flex-col max-md:items-center">
                 <Image src={LogoBranca} alt={"JH Telecom"}/>
-                <h4 className="text-white font-bold text-3xl font-montserrat">Noassas Redes :</h4>
-                <div className="flex space-x-12">
-                    <Link href={""}><Image src={Face} alt={""}/></Link>
-                    <Link href={""}><Image src={Insta} alt={""}/></Link>
-                    <Link href={""}><Image src={In} alt={""}/></Link>
+                <h4 className="text-white font-bold text-3xl font-montserrat max-md:text-2xl max-sm:text-xl max-sm:text-center">Noassas Redes :</h4>
+                <div className="flex space-x-12 items-center">
+                    <Link href={""}><Image src={Face} alt={""} className="min-w-[30px]"/></Link>
+                    <Link href={""}><Image src={Insta} alt={""} className="min-w-[30px]"/></Link>
+                    <Link href={""}><Image src={In} alt={""} className="min-w-[30px]"/></Link>
                 </div>
             </div> 
             <div className="flex flex-col justify-center items-center gap-8">
-                <h4 className="text-white font-bold text-3xl font-montserrat">Fale conosco :</h4>
-                <Link href={""}><button className="text-white py-6 px-20 font-bold font-inter border-solid text-3xl border-white border-2 rounded-3xl">Contato</button></Link>
+                <h4 className="text-white font-bold text-3xl font-montserrat max-md:text-2xl max-sm:text-xl max-sm:text-center">Fale conosco :</h4>
+                <Link href={""}><button className="text-white py-6 px-20 font-bold font-inter border-solid text-3xl border-white border-2 rounded-3xl max-md:py-4 max-md:px-6 max-md:text-2xl">Contato</button></Link>
             </div>
             <div className="space-y-9">
-                <h4 className="text-white font-bold text-3xl font-montserrat">Navegue Pelo Site :</h4>
+                <h4 className="text-white font-bold text-3xl font-montserrat max-md:text-center max-md:text-xl">Navegue Pelo Site :</h4>
                 <ul className="space-y-5 text-center">
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl">Home</Link></li>
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl">Sobre</Link></li>
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl">Notícias</Link></li>
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl">Trabalhe Conosco</Link></li>
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl">Contato</Link></li>
+                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Home</Link></li>
+                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Sobre</Link></li>
+                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Notícias</Link></li>
+                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Trabalhe Conosco</Link></li>
+                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Contato</Link></li>
                 </ul>
             </div>
         </div>
         <div className="flex justify-center bg-[#0E1A33] p-6">
-            <h2 className="text-white font-bold text-xl font-montserrat">Copyright © 2023 JH telecom. Todos os direitos reservados.</h2>
+            <h2 className="text-white font-bold text-xl font-montserrat max-md:text-base max-md:text-center">Copyright © 2023 JH telecom. Todos os direitos reservados.</h2>
         </div>
-        </div>
+        </footer>
     )
 }

@@ -38,7 +38,7 @@ export default function NavBar() {
           className="flex cursor-pointer items-center  text-3xl text-[#0D0A09] sm:text-sm 
       md:text-xl"
         >
-          <Image src={Logo} className="w-48" alt="Logo JHTelecom" />
+          <Image src={Logo} className="w-48 max-md:w-32 max-sm:w-28" alt="Logo JHTelecom" />
         </Link>
         <div
           onClick={() => setOpen(!open)}
