@@ -1,5 +1,5 @@
-import BusinessContact from "@/components/Contact/Businesscontact/businesscontact";
-import InformationContact from "@/components/Contact/Information/information";
+import BusinessContact from "@/components/Contato/Businesscontact/businesscontact";
+import InformationContact from "@/components/Contato/Information/information";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 

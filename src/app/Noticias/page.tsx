@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { News } from '@/mock/News';
-import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
+import LatesNews from "@/components/Noticias/latesNews";
+import { News } from '@/mock/News';
 import Image from "next/image";
-import LatesNews from "@/components/News/latesNews";
+import Link from "next/link";
 
 export default function Noticias(){
     return(

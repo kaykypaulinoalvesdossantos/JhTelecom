@@ -1,9 +1,9 @@
+import In from '@/../public/img/In.png';
+import Insta from '@/../public/img/Insta.png';
+import LogoBranca from '@/../public/img/Logo Oficial - JH Telecom1 branca 1.png';
+import Face from '@/../public/img/facebook.png';
 import Image from "next/image";
 import Link from "next/link";
-import LogoBranca from '@/../public/img/Logo Oficial - JH Telecom1 branca 1.png'
-import Insta from '@/../public/img/Insta.png'
-import Face from '@/../public/img/facebook.png'
-import In from '@/../public/img/In.png'
 
 export default function Footer() {
     return(
@@ -25,11 +25,11 @@ export default function Footer() {
             <div className="space-y-9">
                 <h4 className="text-white font-bold text-3xl font-montserrat max-md:text-center max-md:text-xl">Navegue Pelo Site :</h4>
                 <ul className="space-y-5 text-center">
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Home</Link></li>
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Sobre</Link></li>
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Notícias</Link></li>
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Trabalhe Conosco</Link></li>
-                    <li><Link href={""} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Contato</Link></li>
+                    <li><Link href={"/"} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Home</Link></li>
+                    <li><Link href={"/Sobre"} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Sobre</Link></li>
+                    <li><Link href={"/Noticias"} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Notícias</Link></li>
+                    <li><Link href={"/TrabalheConosco"} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Trabalhe Conosco</Link></li>
+                    <li><Link href={"/Contato"} className="text-white font-light font-montserrat text-2xl max-md:text-xl">Contato</Link></li>
                 </ul>
             </div>
         </div>
