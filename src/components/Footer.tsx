@@ -13,8 +13,8 @@ export default function Footer() {
                 <Image src={LogoBranca} alt={"JH Telecom"}/>
                 <h4 className="text-white font-bold text-3xl font-montserrat max-md:text-2xl max-sm:text-xl max-sm:text-center">Noassas Redes :</h4>
                 <div className="flex space-x-12 items-center">
-                    <Link href={""}><Image src={Face} alt={""} className="min-w-[30px]"/></Link>
-                    <Link href={""}><Image src={Insta} alt={""} className="min-w-[30px]"/></Link>
+                    <Link href={"https://www.facebook.com/profile.php?id=100093492066274&mibextid=ZbWKwL"}><Image src={Face} alt={""} className="min-w-[30px]"/></Link>
+                    <Link href={"https://instagram.com/jhtelecomm?igshid=MW05dGFlMG8wbm81Nw=="}><Image src={Insta} alt={""} className="min-w-[30px]"/></Link>
                     <Link href={""}><Image src={In} alt={""} className="min-w-[30px]"/></Link>
                 </div>
             </div> 
