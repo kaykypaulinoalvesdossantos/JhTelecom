@@ -1,6 +1,6 @@
+import aboutImg from '@/../public/img/aboutImg.png';
 import Image from "next/image";
 import Link from "next/link";
-import aboutImg from '@/../public/img/aboutImg.png'
 
 export default function About(){
     return(

@@ -1,7 +1,7 @@
-import Image from "next/image"
 import serviceimg01 from '@/../public/img/Servicesimg01.png'
 import serviceimg02 from '@/../public/img/Servicesimg02.png'
 import serviceimg03 from '@/../public/img/Servicesimg03.png'
+import Image from "next/image"
 
 export default function Services(){
     return(
