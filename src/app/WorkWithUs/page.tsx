@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import WhatExpect from "@/components/WorkWithUs/Whatexpect/whatexpect";
+import FormContats from "@/components/WorkWithUs/formContats/FormContats";
 import InformationWork from "@/components/WorkWithUs/information/information";
 
 export default function Workwithus(){
@@ -10,6 +11,7 @@ export default function Workwithus(){
         <NavBar/>
         <InformationWork/>
         <WhatExpect/>
+        <FormContats/>
         <Footer/>
         </section>
       </main>
