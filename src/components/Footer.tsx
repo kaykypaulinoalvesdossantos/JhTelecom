@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="w-full py-24 px-40 bg-[#1C3363] flex justify-around max-md:flex-col max-md:gap-16 max-md:items-center">
            <div className="space-y-8 max-md:space-y-4 max-md:flex max-md:flex-col max-md:items-center">
                 <Image src={LogoBranca} alt={"JH Telecom"}/>
-                <h4 className="text-white font-bold text-3xl font-montserrat max-md:text-2xl max-sm:text-xl max-sm:text-center">Noassas Redes :</h4>
+                <h4 className="text-white font-bold text-3xl font-montserrat max-md:text-2xl max-sm:text-xl max-sm:text-center">Nossas Redes :</h4>
                 <div className="flex space-x-12 items-center">
                     <Link href={"https://www.facebook.com/profile.php?id=100093492066274&mibextid=ZbWKwL"}><Image src={Face} alt={""} className="min-w-[30px]"/></Link>
                     <Link href={"https://instagram.com/jhtelecomm?igshid=MW05dGFlMG8wbm81Nw=="}><Image src={Insta} alt={""} className="min-w-[30px]"/></Link>
