@@ -31,18 +31,18 @@ export default function NavBar() {
   ]
 
   return (
-    <nav className="w-full shadow-nabBarShadow">
+    <nav className="w-screen shadow-nabBarShadow">
       <div className="items-center justify-between bg-[#FBF8F5] px-7 py-4 md:flex md:px-10">
         <Link
           href={'/'}
           className="flex cursor-pointer items-center  text-3xl text-[#0D0A09] sm:text-sm 
       md:text-xl"
         >
-          <Image src={Logo} className="w-48 max-md:w-32 max-sm:w-28" alt="Logo JHTelecom" />
+          <Image src={Logo} className="w-48 max-md:w-32 max-sm:w-[85px]" alt="Logo JHTelecom" />
         </Link>
         <div
           onClick={() => setOpen(!open)}
-          className="absolute right-8 top-6 cursor-pointer text-3xl min-[901px]:hidden"
+          className="absolute right-8 top-3 cursor-pointer text-3xl min-[901px]:hidden"
         >
           {open ? (
             <Menu className="hidden" />
