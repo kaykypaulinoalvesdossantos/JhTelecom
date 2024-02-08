@@ -13,8 +13,7 @@ export default function Home() {
       <section className="space-y-28">
       <CompontsVideo/>
       <About/>
-      <NewsPage/>
-      <Services/>
+      {/* <NewsPage/> */}
       <Contact/>
       <Footer/>
       </section>

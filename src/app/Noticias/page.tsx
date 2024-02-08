@@ -1,16 +1,17 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import LatesNews from "@/components/Noticias/latesNews";
+import EmBreve from "@/components/embreve";
 import { News } from '@/mock/News';
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Noticias(){
     return(
-        <>
+        <main>
         <NavBar/>
-        <main className="flex flex-col items-center py-24 gap-36">    
-        <LatesNews/>
+            <EmBreve/>    
+        {/*<LatesNews/>
         <h1 className="font-inter text-[#1c3363] text-6xl font-bold">Noticias Anteriores</h1>
         <div className="grid grid-cols-3 grid-rows-2 gap-12 max-[1351px]:grid-cols-2 max-sm:grid-cols-1">
             {News.map((news) => (
@@ -23,9 +24,8 @@ export default function Noticias(){
                         </Link>
                     </div>
                 ))}
-                </div>
-                </main>
+                </div> */}
       <Footer/> 
-      </>
+      </main>
     )
 }

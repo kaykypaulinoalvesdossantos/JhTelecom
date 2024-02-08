@@ -9,3 +9,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+main{
+  overflow-x: hidden;
+}
+

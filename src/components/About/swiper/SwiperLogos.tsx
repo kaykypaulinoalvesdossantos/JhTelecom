@@ -1,11 +1,12 @@
 "use client"
 import vip from "@/../public/img/Vip.png"
 import niu from "@/../public/img/Niu.png"
+import giga from "@/../public/img/giga.png"
 
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from 'swiper/modules';
+import { Autoplay } from "swiper"
 
 // Import Swiper styles
 import "swiper/css";
@@ -50,7 +51,16 @@ export default function SwiperLogos() {
         }}
         loop={true}
         modules={[Autoplay]}
-        className="mySwiper">
+        className="mySwiper ">
+          <SwiperSlide>
+            <Image src={vip} alt={""} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={niu} alt={""}/>
+          </SwiperSlide>
+          <SwiperSlide >
+            <Image src={giga} alt={""}/>
+          </SwiperSlide>
           <SwiperSlide>
             <Image src={vip} alt={""}/>
           </SwiperSlide>
@@ -58,10 +68,7 @@ export default function SwiperLogos() {
             <Image src={niu} alt={""}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={vip} alt={""}/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={niu} alt={""}/>
+            <Image src={giga} alt={""}/>
           </SwiperSlide>
           <SwiperSlide>
             <Image src={vip} alt={""}/>
@@ -70,10 +77,16 @@ export default function SwiperLogos() {
             <Image src={niu} alt={""}/>
           </SwiperSlide>
           <SwiperSlide>
+            <Image src={giga} alt={""}/>
+          </SwiperSlide>
+          <SwiperSlide>
             <Image src={vip} alt={""}/>
           </SwiperSlide>
           <SwiperSlide>
             <Image src={niu} alt={""}/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={giga} alt={""}/>
           </SwiperSlide>
 
         </Swiper>

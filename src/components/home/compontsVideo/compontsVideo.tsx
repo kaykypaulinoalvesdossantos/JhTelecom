@@ -1,7 +1,7 @@
 'use client'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import { Autoplay, Pagination } from 'swiper'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -11,7 +11,6 @@ import './styles.css'
 // import required modules
 import Image from 'next/image'
 import { apressetation } from '@/mock/apressetation'
-import { Autoplay, Pagination } from 'swiper/modules'
 
 export default function CompontsVideo() {
   return (
@@ -36,7 +35,7 @@ export default function CompontsVideo() {
               key={IMG.id}
               className="!z-0 !max-w-full !h-[695px] object-cover text-white max-lg:!h-[495px] max-md:!h-[300px] max-sm:!h-screen"
             >
-              <Image src={IMG.dir} alt="" />
+              <Image src={IMG.dir} alt=""/>
               <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-screen'>
               <h2 className="font_montserrat text-3xl font-bold text-whiteColor max-lg:text-3xl max-md:text-2xl max-sm:text-3xl mx-1">
                {IMG.text}
