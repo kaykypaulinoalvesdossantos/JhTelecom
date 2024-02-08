@@ -6,13 +6,14 @@ import giga from "@/../public/img/giga.png"
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper"
+
 
 // Import Swiper styles
 import "swiper/css";
 
 import "./styles.css";
 import Image from "next/image";
+import { Autoplay } from "swiper/modules";
 
 export default function SwiperLogos() {
 
