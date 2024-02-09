@@ -41,7 +41,7 @@ export default function SwiperLogos() {
   return (
       <>
       <div className="bg-[#1C3363] flex flex-col items-center gap-20 py-20">
-        <h3 className="text-5xl font-montserrat font-bold max-md:text-center max-md:text-3xl text-white">Empresas parceiras</h3>
+        <h3 className="text-5xl font-montserrat font-bold max-md:text-center max-md:text-3xl text-white">Empresa parceira</h3>
         <Swiper 
         spaceBetween={30}
         breakpoints={breakpoints}
@@ -53,39 +53,35 @@ export default function SwiperLogos() {
         loop={true}
         modules={[Autoplay]}
         className="mySwiper ">
-          <SwiperSlide>
-            <Image src={vip} alt={""} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={niu} alt={""}/>
-          </SwiperSlide>
+         
           <SwiperSlide >
             <Image src={giga} alt={""}/>
           </SwiperSlide>
-          <SwiperSlide>
-            <Image src={vip} alt={""}/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={niu} alt={""}/>
-          </SwiperSlide>
+          
           <SwiperSlide>
             <Image src={giga} alt={""}/>
           </SwiperSlide>
-          <SwiperSlide>
-            <Image src={vip} alt={""}/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={niu} alt={""}/>
-          </SwiperSlide>
+         
           <SwiperSlide>
             <Image src={giga} alt={""}/>
           </SwiperSlide>
+          
           <SwiperSlide>
-            <Image src={vip} alt={""}/>
+            <Image src={giga} alt={""}/>
           </SwiperSlide>
+
+          <SwiperSlide >
+            <Image src={giga} alt={""}/>
+          </SwiperSlide>
+          
           <SwiperSlide>
-            <Image src={niu} alt={""}/>
+            <Image src={giga} alt={""}/>
           </SwiperSlide>
+         
+          <SwiperSlide>
+            <Image src={giga} alt={""}/>
+          </SwiperSlide>
+          
           <SwiperSlide>
             <Image src={giga} alt={""}/>
           </SwiperSlide>

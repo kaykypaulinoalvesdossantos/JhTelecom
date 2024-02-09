@@ -99,7 +99,6 @@ export default function FormContats() {
                   required
                 >
                   <option value="">Selecione...</option>
-                  <option value="maua">Mauá</option>
                   <option value="zona_leste">Zona Leste</option>
                   <option value="litoral">Litoral</option>
                 </select>
