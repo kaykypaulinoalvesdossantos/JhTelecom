@@ -1,7 +1,8 @@
 "use client"
+import axios from "axios";
 import { useState } from "react";
 
-export default function FomsContatos() {
+export default function FormsContatos() {
     const [formData, setFormData] = useState({
       nome: '',
       email: '',
@@ -9,35 +10,21 @@ export default function FomsContatos() {
       telefone_numero: '',
       local_interesse: '',
     });
-  
-    const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
-      const { name, value } = e.target;
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
+
+    const handleChange = (e : any) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-  
-    const handleFormSubmit = (e: { preventDefault: () => void; }) => {
-      e.preventDefault();
-      // Imprimir os dados do formulário no console
-      console.log('Formulário enviado:', formData);
-  
-      // Limpar os campos do formulário
-      setFormData({
-        nome: '',
-        email: '',
-        telefone_dd: '',
-        telefone_numero: '',
-        local_interesse: '',
-      });
+
+    const handleSubmit = async (e: { preventDefault: () => void; })  => {
+     e.preventDefault()
+     axios.post("https://jhback.onrender.com/enviar-email", formData)
     };
   
     return (
       <div className="flex items-center justify-center flex-col">
         <div className="max-w-5xl flex items-center justify-center flex-col gap-24 py-24 px-12 shadow-cardShadow rounded-md">
           <h2 className="font-montserrat text-[#1C3363] text-4xl font-bold max-[1000px]:text-center max-md:text-2xl">Formulário Para Contato</h2>
-          <form className="flex flex-col gap-12" onSubmit={handleFormSubmit}>
+          <form className="flex flex-col gap-12" onSubmit={handleSubmit}>
             <label className="text-xl flex flex-col gap-3">
               Nome Completo
               <input
@@ -46,7 +33,7 @@ export default function FomsContatos() {
                 name="nome"
                 placeholder="João Carlos Da Silva"
                 value={formData.nome}
-                onChange={handleInputChange}
+                onChange={handleChange}
                 required
               />
             </label>
@@ -59,7 +46,7 @@ export default function FomsContatos() {
                 className="w-full bg-[#D8DFE6] rounded text-lg py-1 px-3 outline-none border-b-4 border-[#B4BABF]"
                 placeholder="exemplo.email@gmail.com"
                 value={formData.email}
-                onChange={handleInputChange}
+                onChange={handleChange}
                 required
               />
             </label>
@@ -74,7 +61,7 @@ export default function FomsContatos() {
                     placeholder="DD"
                     className="w-16 text-center bg-[#D8DFE6] rounded text-lg py-1 outline-none border-b-4 border-[#B4BABF]"
                     value={formData.telefone_dd}
-                    onChange={handleInputChange}
+                    onChange={handleChange}
                     required
                   />
                   <input
@@ -83,7 +70,7 @@ export default function FomsContatos() {
                     placeholder="9 1234-5678"
                     className="px-3 w-full bg-[#D8DFE6] rounded text-lg py-1 outline-none border-b-4 border-[#B4BABF]"
                     value={formData.telefone_numero}
-                    onChange={handleInputChange}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -92,7 +79,12 @@ export default function FomsContatos() {
   
             <label className="text-xl flex flex-col gap-3">
             Assunto
-            <textarea  className="px-3  bg-[#D8DFE6] rounded text-lg py-1 outline-none border-b-4 border-[#B4BABF]   "/>
+            <textarea  
+                name="local_interesse"
+                className="px-3  bg-[#D8DFE6] rounded text-lg py-1 outline-none border-b-4 border-[#B4BABF]"
+                value={formData.local_interesse}
+                onChange={handleChange}
+            />
             </label>
   
             <input
