@@ -15,11 +15,19 @@ export default function FormsContatos() {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e: { preventDefault: () => void; })  => {
-     e.preventDefault()
-     axios.post("https://jhback.onrender.com/enviar-email", formData)
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
+      e.preventDefault();
+      axios.post("https://jhback.onrender.com/enviar-email", formData)
+      
+      setFormData({
+        nome: '',
+        email: '',
+        telefone_dd: '',
+        telefone_numero: '',
+        local_interesse: '',
+      });
     };
-  
+
     return (
       <div className="flex items-center justify-center flex-col">
         <div className="max-w-5xl flex items-center justify-center flex-col gap-24 py-24 px-12 shadow-cardShadow rounded-md">
