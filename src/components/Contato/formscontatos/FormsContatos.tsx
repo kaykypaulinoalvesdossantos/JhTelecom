@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function FormsContatos() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
     const [formData, setFormData] = useState({
       nome: '',
       email: '',
@@ -26,6 +27,12 @@ export default function FormsContatos() {
         telefone_numero: '',
         local_interesse: '',
       });
+      setIsSubmitted(true);
+
+      // Escondendo a mensagem após 2 segundos
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 2000);
     };
 
     return (
@@ -101,6 +108,12 @@ export default function FormsContatos() {
               className="bg-[#2d52a3] py-4 px-16 text-white font-bold text-2xl rounded-lg shadow-buttonShadow max-md:text-xl max-md:py-3 max-md:px-10"
             />
           </form>
+          {isSubmitted && (
+        <div style={{ position: 'fixed', top: '20px', left: '20px', backgroundColor: 'green', color: 'white', padding: '10px', borderRadius: '5px' }}>
+          Formulário enviado com sucesso!
+        </div>
+      )}
+
         </div>
       </div>
     );

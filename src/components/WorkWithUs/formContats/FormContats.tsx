@@ -3,6 +3,8 @@ import axios from "axios";
 import { SetStateAction, useState } from "react";
 
 export default function FormContats() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+    const [selectedFile, setSelectedFile] = useState<File | null>(null)
     const [formData, setFormData] = useState({
         nome: '',
         email: '',
@@ -20,8 +22,11 @@ export default function FormContats() {
         }));
     };
 
+
     const handlePdfChange = (e: any) => {
-        setPdfFile(e.target.files[0]); // armazena o arquivo PDF selecionado
+        setPdfFile(e.target.files[0]); 
+        const file = e.target.files?.[0];;
+        setSelectedFile(file);// armazena o arquivo PDF selecionado
     };
 
     const handleFormSubmit = async (e: { preventDefault: () => void; }) => {
@@ -48,10 +53,17 @@ export default function FormContats() {
                 telefone_numero: '',
                 local_interesse: '',
             });
-            setPdfFile(null); // limpar o arquivo PDF após o envio bem-sucedido
+            setPdfFile(null);
+            setSelectedFile(null) // limpar o arquivo PDF após o envio bem-sucedido
         } catch (error) {
             console.error('Erro ao enviar formulário:', error);
         }
+        setIsSubmitted(true);
+
+      // Escondendo a mensagem após 2 segundos
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 2000);
     };
 
     return (
@@ -129,12 +141,13 @@ export default function FormContats() {
                     <label className="text-xl flex flex-col gap-3">
                         Currículo (PDF)
                         <label htmlFor="pdf-file" className="flex flex-col items-center justify-center max-w-xs h-24 cursor-pointer bg-[#D8DFE6] rounded border-b-4 border-[#B4BABF]">
-                            <div className="flex items-center justify-center pt-5 pb-6 gap-5">
-                                <p className="mb-2 text-sm text-[#909499]">Selecione um arquivo PDF</p>
-                                <svg className="w-8 h-8 mb-4 text-[#545759]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                                </svg>
-                            </div>
+                                {selectedFile ? ( <p  className="mb-2 text-sm text-[#909499]"> <b>Arquivo selecionado:</b><br/>{selectedFile.name}</p> ) : 
+                                (<div className="flex items-center justify-center pt-5 pb-6 gap-5">
+                                    <p className="mb-2 text-sm text-[#909499]">Selecione um arquivo</p>
+                                    <svg className="w-8 h-8 mb-4 text-[#545759]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                                    </svg>
+                                </div>)}
                             <input id="pdf-file" type="file" className="hidden" accept=".pdf" onChange={handlePdfChange} />
                         </label>
                     </label>
@@ -144,6 +157,11 @@ export default function FormContats() {
                         className="bg-[#2d52a3] py-4 px-16 text-white font-bold text-2xl rounded-lg shadow-buttonShadow max-md:text-xl max-md:py-3 max-md:px-10"
                     />
                 </form>
+                {isSubmitted && (
+        <div style={{ position: 'fixed', top: '20px', left: '20px', backgroundColor: 'green', color: 'white', padding: '10px', borderRadius: '5px' }}>
+          Formulário enviado com sucesso!
+        </div>
+      )}
             </div>
         </div>
     );
