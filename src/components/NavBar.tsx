@@ -16,10 +16,10 @@ export default function NavBar() {
       name: 'Sobre',
       link: '/Sobre',
     },
-    {
-      name: 'Noticias',
-      link: '/Noticias',
-    },
+    // {
+    //   name: 'Noticias',
+    //   link: '/Noticias',
+    // },
     {
       name: 'Trabalhe Conosco',
       link: '/TrabalheConosco',
