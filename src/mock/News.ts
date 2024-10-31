@@ -8,7 +8,7 @@ export const News = [
     img: vaga,
     title: "Estamos contratando novos tecnicos para nosso time de intalação",
     text:
-      "A JH Telecom está contratando novos técnicos para instalação de fibra óptica! Venha fazer parte de uma equipe dinâmica e cresça na área de telecomunicações com excelentes ganhos, além de benefícios como ajuda de custo para combustível e aluguel de veículo, entre outros. Não perca essa oportunidade de impulsionar sua carreira!, envie o seu currículo marcosdemetrio@jhtele.com.br",
+      "A JH Telecom está contratando técnicos para instalação de fibra óptica! Junte-se a uma equipe dinâmica e cresça na área de telecomunicações com ótimos ganhos e benefícios, como ajuda de custo para combustível e aluguel de veículo. Envie seu currículo para marcosdemetrio@jhtele.com.br.",
     date: "31/10/2024",
     slug: "Teste01",
     },
